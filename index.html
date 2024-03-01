@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Menu</title>
+    <style>
+        .accordion{
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            transition: .5s;
+            background-color: aqua;
+            color: black;
+        }
+        /* .panel{
+            display: none;
+            overflow: hidden;
+        } */
+        .panel{
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.9s ease-in;
+        }
+        .active{
+            background-color: red;
+        }
+        .accordion::after{
+            content: "🥶🥶🥶";
+            float: right;
+        }
+        .active::after{
+            content: "🥵🥵🥵";
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Açılır Pencereler</h1>
+    <button class="accordion">1. Açılır Pencere</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim cum quia vitae praesentium, saepe aperiam rerum iusto natus dolorem facere possimus inventore ratione iure fugit aut nihil suscipit id dicta.</p>
+    </div>
+    <button class="accordion">2. Açılır Pencere</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim cum quia vitae praesentium, saepe aperiam rerum iusto natus dolorem facere possimus inventore ratione iure fugit aut nihil suscipit id dicta.</p>
+    </div>
+    <button class="accordion">3. Açılır Pencere</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim cum quia vitae praesentium, saepe aperiam rerum iusto natus dolorem facere possimus inventore ratione iure fugit aut nihil suscipit id dicta.</p>
+    </div>
+    <script src="accordion.js"></script>
+</body>
+</html>
